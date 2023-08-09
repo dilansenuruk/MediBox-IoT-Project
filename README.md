@@ -5,3 +5,7 @@
 
 ### Medibox Settings Interface with left side panel
 ![Settings](https://github.com/dilansenuruk/MediBox-IoT-Project/assets/73630480/e2162393-bea6-4363-b967-f2a1fcc57fdd)
+
+### Circuit on Wokwi Platform
+![Wokwi Circuit](https://github.com/dilansenuruk/MediBox-IoT-Project/assets/73630480/022b9153-7dff-4db0-bdd1-5b5d9a49b4cd)
+
