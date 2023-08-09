@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "author": "dilan senuruk",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 71.12, "left": 25.87, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 41.32,
+      "left": 212.88,
+      "attrs": { "humidity": "70.5", "temperature": "30.2" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -14.15,
+      "left": -29.16,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 237.67,
+      "left": 208.1,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": -136.11, "left": 189.73, "attrs": {} },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": -316.15,
+      "left": -22.44,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "dht1:VCC", "red", [ "h100.18", "v-29.44" ] ],
+    [ "esp:GND.1", "dht1:GND", "black", [ "h0" ] ],
+    [ "esp:D15", "dht1:SDA", "green", [ "h0" ] ],
+    [ "esp:3V3", "ldr1:VCC", "red", [ "h75.68", "v-227.77" ] ],
+    [ "esp:GND.1", "ldr1:GND", "black", [ "h62.64", "v-208.27" ] ],
+    [ "esp:D34", "ldr1:AO", "green", [ "h-39.77", "v-65.54", "h150.56" ] ],
+    [ "esp:GND.1", "servo1:GND", "black", [ "h51.91", "v-306.23" ] ],
+    [ "esp:GND.1", "bz1:1", "black", [ "h42.25", "v102.4" ] ],
+    [ "esp:D12", "bz1:2", "green", [ "h-18.64", "v133.22", "h298.74" ] ],
+    [ "esp:VIN", "servo1:V+", "red", [ "h-78.43", "v-306.23" ] ],
+    [ "esp:D18", "servo1:PWM", "green", [ "h31.42", "v-219.93" ] ],
+    [ "esp:VIN", "lcd1:VCC", "red", [ "h-110.72", "v-382.12" ] ],
+    [ "esp:GND.2", "lcd1:GND", "black", [ "h-95.56", "v-383.16", "h-0.01", "v-121.11" ] ],
+    [ "esp:D21", "lcd1:SDA", "green", [ "h40.87", "v-165.73", "h-222.5", "v-114.99" ] ],
+    [ "esp:D22", "lcd1:SCL", "green", [ "h24.92", "v-222.76", "h-193.28", "v-80.53" ] ]
+  ],
+  "dependencies": {}
+}
